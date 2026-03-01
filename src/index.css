@@ -1,0 +1,17 @@
+/* Core Tailwind Imports */
+@import "tailwindcss";
+
+/* 
+ * HeroUI Plugin Configuration
+ * We use a local plugin export to instantiate HeroUI
+ */
+@plugin './hero.js';
+
+/* 
+ * Apply HeroUI themes from node_modules
+ * Note: You may need to change the path to fit your project structure if using a monorepo
+ */
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+
+/* Configure Dark mode variant for HeroUI components */
+@custom-variant dark (&:is(.dark *));
